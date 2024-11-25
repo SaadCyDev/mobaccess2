@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "mobaccess2",
+    "slug": "mobaccess2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "splash": {
+      "image": "./assets/images/spa.jpeg",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    }
+  }
+}
