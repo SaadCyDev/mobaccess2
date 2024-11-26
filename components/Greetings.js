@@ -8,11 +8,10 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native"; // Hook to use navigation
-import backgroundImage from "../assets/images/page-ac.jpeg"; // Ensure you have the correct path to your image
-
+import { useNavigation } from "@react-navigation/native";
+import backgroundImage from "../assets/images/page-ac.jpeg";
 const Greeting = () => {
-  const navigation = useNavigation(); // Access navigation prop using the hook
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -30,14 +29,14 @@ const Greeting = () => {
           <View style={styles.buttonContainer}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate("AvecMobile")} // Navigate to AvecMobile screen
+              onPress={() => navigation.navigate("AvecMobile")}
             >
               <Text style={styles.buttonText}>Avec Mobile ID</Text>
             </TouchableOpacity>
-
+            <Text style={styles.middleText}>Ou</Text>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate("Sans")} // Navigate to Sans screen
+              onPress={() => navigation.navigate("Sans")}
             >
               <Text style={styles.buttonText}>SANS</Text>
             </TouchableOpacity>
@@ -53,17 +52,20 @@ export default Greeting;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
+    height: "100%",
   },
   imbac: {
+    // justifyContent: "center",
+    // alignItems: "center",
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    width: "100%",
+    height: "100%",
   },
   contentContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 10,
   },
   boldItalicText: {
     fontSize: 20,
@@ -96,5 +98,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "600",
     textAlign: "center",
+  },
+  middleText: {
+    fontSize: 18,
+    fontWeight: "500",
   },
 });

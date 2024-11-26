@@ -1,5 +1,8 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  NavigationIndependentTree,
+} from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Greeting from "../components/Greetings"; // Your Greeting component
 import AvecMobile from "../components/AvecMobile"; // Add your AvecMobile screen
@@ -10,12 +13,17 @@ const Stack = createStackNavigator();
 
 export default function Index() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Greeting">
-        <Stack.Screen name="Greeting" component={Greeting} />
-        <Stack.Screen name="AvecMobile" component={AvecMobile} />
-        <Stack.Screen name="Sans" component={Sans} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <NavigationIndependentTree>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Greeting"
+          screenOptions={{ headerShown: false }}
+        >
+          <Stack.Screen name="Greeting" component={Greeting} />
+          <Stack.Screen name="AvecMobile" component={AvecMobile} />
+          <Stack.Screen name="Sans" component={Sans} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </NavigationIndependentTree>
   );
 }
