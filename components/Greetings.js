@@ -9,7 +9,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import backgroundImage from "../assets/images/page-ac.jpeg";
+// import backgroundImage from "../assets/images/page-ac.jpeg";
+import backgroundImage from "../assets/images/pa2.jpeg";
 const Greeting = () => {
   const navigation = useNavigation();
 
@@ -21,6 +22,7 @@ const Greeting = () => {
         resizeMode="cover"
         style={styles.imbac}
       >
+        <Text style={styles.mobTitle}>MobAccess</Text>
         <View style={styles.contentContainer}>
           <Text style={styles.boldItalicText}>
             Un monde numérique sans barrières
@@ -51,51 +53,63 @@ export default Greeting;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     width: "100%",
     height: "100%",
-  },
-  imbac: {
     // justifyContent: "center",
     // alignItems: "center",
+  },
+  imbac: {
     flex: 1,
     width: "100%",
     height: "100%",
+    justifyContent: "center",
+    // alignItems: "center",
+  },
+  mobTitle: {
+    color: "#315259",
+    fontSize: 25,
+    marginTop: "120",
+    marginLeft: "50%",
+    fontWeight: "700",
+    letterSpacing: 1.5,
   },
   contentContainer: {
     flex: 1,
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center",
   },
   boldItalicText: {
     fontSize: 20,
     fontWeight: "bold",
-    fontStyle: "italic",
-    color: "#000",
-    marginBottom: 50,
+    // fontStyle: "italic",
+    fontFamily: "San Francisco",
+    color: "#315259",
+    marginBottom: 20,
+    marginTop: "30%",
     textAlign: "center",
   },
   buttonContainer: {
     backgroundColor: "rgba(255, 255, 255, 0.6)",
     borderRadius: 10,
-    padding: 20,
+    padding: 10,
     width: "80%",
     alignItems: "center",
   },
   button: {
-    backgroundColor: "#28a745",
+    backgroundColor: "#5dd4d4",
     paddingVertical: 15,
     paddingHorizontal: 50,
     minWidth: 270,
     borderRadius: 10,
-    marginVertical: 10,
+    marginVertical: 20,
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
   },
   buttonText: {
     fontSize: 18,
-    color: "#fff",
+    color: "#315259",
     fontWeight: "600",
     textAlign: "center",
   },
